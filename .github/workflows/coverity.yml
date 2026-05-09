@@ -5,6 +5,9 @@ on:
   schedule:
   - cron: "30 12 */2 * *"
 
+permissions:
+  contents: read
+
 jobs:
   coverity:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
       image: ghcr.io/rauc/rauc/rauc-ci:latest
       options: --user=root
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
     - run: |
         PLATFORM=`uname`
         export TOOL_BASE="/tmp/coverity-scan-analysis"
