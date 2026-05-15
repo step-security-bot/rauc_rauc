@@ -1,4 +1,4 @@
-FROM debian:bookworm
+FROM debian:bookworm@sha256:85019db29298555fd1a5f4bb57673ae989414a9884117c75d7a3e1a6cce21688
 
 # Add backports for pkcs11-provider
 RUN echo "deb http://deb.debian.org/debian bookworm-backports main" \

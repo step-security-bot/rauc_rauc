@@ -6,3 +6,13 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: ".github/workflows"
+
+  - package-ecosystem: pip
+    directory: /docs
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /test
+    schedule:
+      interval: daily
